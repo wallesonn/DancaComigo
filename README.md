@@ -16,7 +16,7 @@ Dança Comigo é uma plataforma que facilita o encontro entre dançarinos, permi
 
 ## Tecnologias
 
-- [Lista de tecnologias será adicionada]
+- [A lista de tecnologias será adicionada]
 
 ## Como Usar
 
