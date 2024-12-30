@@ -1,4 +1,0 @@
-images/dotnet_bot;images/dotnet_bot
-images/favorite_filled;images/favorite_filled
-images/favorite_outline;images/favorite_outline
-raw/aboutassets;raw/AboutAssets
