@@ -1,0 +1,1 @@
+-v --force --timestamp=none --sign - --entitlements /Users/wallesonferreira/Dev Projects/DancaComigo/DancaComigo/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/Entitlements.xcent /Users/wallesonferreira/Dev Projects/DancaComigo/DancaComigo/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/DancaComigo.app

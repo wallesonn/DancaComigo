@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+			 x:Class="DancaComigo.Views.DancePage"
+			 xmlns:viewmodel="clr-namespace:DancaComigo.ViewModels"
+			 xmlns:model="clr-namespace:DancaComigo.Models"
+			 x:DataType="viewmodel:DanceViewModel"
+			 Title="{Binding Title}">
+
+	<Grid RowDefinitions="*" 
+		  ColumnDefinitions="*"
+		  Padding="10">
+
+		<RefreshView Command="{Binding LoadDancesCommand}"
+					 IsRefreshing="{Binding IsBusy}">
+			<CollectionView ItemsSource="{Binding Dances}"
+						  SelectionMode="None">
+				<CollectionView.ItemTemplate>
+					<DataTemplate x:DataType="model:Dance">
+						<Frame Margin="0,5" Padding="10">
+							<Grid ColumnDefinitions="*, Auto">
+								<VerticalStackLayout Grid.Column="0" Spacing="5">
+									<Label Text="{Binding Name}" 
+										   FontSize="20"
+										   FontAttributes="Bold"/>
+									<Label Text="{Binding Description}"
+										   FontSize="16"/>
+									<Label Text="{Binding DifficultyLevel}"
+										   FontSize="14"
+										   TextColor="Gray"/>
+								</VerticalStackLayout>
+
+								<ImageButton Grid.Column="1"
+										   Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:DanceViewModel}}, Path=ToggleFavoriteCommand}"
+										   CommandParameter="{Binding .}"
+										   Source="{Binding IsFavorite, Converter={StaticResource BoolToFavoriteIconConverter}}"
+										   HeightRequest="30"
+										   WidthRequest="30"
+										   VerticalOptions="Start"/>
+							</Grid>
+						</Frame>
+					</DataTemplate>
+				</CollectionView.ItemTemplate>
+			</CollectionView>
+		</RefreshView>
+
+		<ActivityIndicator IsVisible="{Binding IsBusy}"
+						 IsRunning="{Binding IsBusy}"
+						 HorizontalOptions="Center"
+						 VerticalOptions="Center"/>
+	</Grid>
+</ContentPage>
