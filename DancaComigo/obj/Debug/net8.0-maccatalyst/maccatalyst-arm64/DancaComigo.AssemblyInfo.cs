@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DancaComigo")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+75494a0bea96aa2bae1cd49528501c7a1b57447f")]
 [assembly: System.Reflection.AssemblyProductAttribute("DancaComigo")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DancaComigo")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
